@@ -28,8 +28,8 @@ The provided phoneNumber is a valid phoneNumber if its value matches with any of
 
 */
 
-module.exports = function checkPhoneNumber() {
-
-  // Provide Solution Code Here
-
-}
+module.exports = function checkPhoneNumber(inputtxt) {
+  var pattern =
+    /^[+]?(1\-|1\s|1|\d{3}\-|\d{3}\s|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/g;
+  return pattern.test(inputtxt);
+};

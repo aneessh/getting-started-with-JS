@@ -14,5 +14,12 @@ for any non-numeric value passed to the function.
 module.exports = function replaceString(inputString, searchString, replaceWith) {
 
   // Provide Solution Code Here
+  if(isNaN(inputString) && isNaN(searchString) && isNaN(replaceWith)){
+  var st = inputString.replace(searchString,replaceWith);
+  return st;
+  }
+  else{
+    return "Invalid Input Types, All Inputs Should Be of Type String !!"; 
+  }
 
 }

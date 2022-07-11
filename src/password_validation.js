@@ -14,8 +14,15 @@ Use Regular Expression to perform validation check.
 
 */
 
-module.exports = function checkPassword() {
+module.exports = function checkPassword(password) {
 
   // Provide Solution Code Here
+  var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,20}$/;
+  if(!regularExpression.test(password)) {
+      return false;
+  }
+  else{
+    return true;
+  }
 
 }
